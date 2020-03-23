@@ -68,13 +68,26 @@
  */
 class DATABASE_CONFIG {
 
+	// Original setting
+	// public $default = array(
+	// 	'datasource' => 'Database/Mysql',
+	// 	'persistent' => false,
+	// 	'host' 		 => '',
+	// 	'login'      => '',
+	// 	'password'   => '',
+	// 	'database'   => '',
+	// 	'prefix'     => '',
+	// 	'encoding'   => 'utf8',
+	// );
+
+	// Jim's local setting
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' 		 => '',
-		'login'      => '',
-		'password'   => '',
-		'database'   => '',
+		'host' 		 => 'localhost',
+		'login'      => 'cake_user',
+		'password'   => 'cake_user',
+		'database'   => 'trial',
 		'prefix'     => '',
 		'encoding'   => 'utf8',
 	);
