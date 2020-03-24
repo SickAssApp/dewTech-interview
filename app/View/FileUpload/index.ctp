@@ -13,7 +13,10 @@
 		<h3>Import Form</h3>
 	</div>
 <?php
-echo $this->Form->create('FileUpload');
+echo $this->Form->create('FileUpload', array(
+		'type' => 'file',
+		'url' => array('controller' => 'FileUpload', 'action' => 'uploadFile',),
+	));
 echo $this->Form->input('file', array('label' => 'File Upload', 'type' => 'file'));
 echo $this->Form->submit('Upload', array('class' => 'btn btn-primary'));
 echo $this->Form->end();
@@ -36,6 +39,7 @@ echo $this->Form->end();
 		</thead>
 		<tbody>
 <?php
+if(!empty($file_uploads)){
 foreach ($file_uploads as $file_upload) :
 ?>
 			<tr>
@@ -46,6 +50,7 @@ foreach ($file_uploads as $file_upload) :
 			</tr>
 <?php
 endforeach;
+}
 ?>
 		</tbody>
 	</table>

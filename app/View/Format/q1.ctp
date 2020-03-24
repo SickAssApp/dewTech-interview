@@ -6,7 +6,7 @@
 	echo $this->Form->create('Type',
 		array(
 			'id'=>'form_type',
-			'url' => array('controller' => 'Format', 'action' => 'submit'),			
+			'url' => array('controller' => 'Format', 'action' => 'submit'),
 			'type'=>'file',
 			'class'=>'',
 			'autocomplete'=>'off',

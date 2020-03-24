@@ -91,4 +91,17 @@ class DATABASE_CONFIG {
 		'prefix'     => '',
 		'encoding'   => 'utf8',
 	);
+
+	// CSV
+	// public $csvfile  = array(
+	// 	'datasource' => 'Database/CsvSource',
+	// 	'persistent' => false,
+	// 	'host' 		 => 'localhost',
+	// 	'login'      => 'cake_user',
+	// 	'password'   => 'cake_user',
+	// 	'database'   => 'trial',
+	// 	'prefix'     => '',
+	// 	'encoding'   => 'utf8',
+	// );
+	
 }
