@@ -18,4 +18,12 @@
 // 			$this->set('title',__('Question: Please change Pop Up to mouse over (soft click)'));
 		}
 		
+		public function submitResult(){
+			
+			$type = $this->request->data['Type']['type'];
+
+			$this->set('type', $type);
+			$this -> render('/Format/q1_result');
+
+		}
 	}

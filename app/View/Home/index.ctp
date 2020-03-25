@@ -1,7 +1,7 @@
 <div class="row-fluid">
-	<div style="float:right">
+	<!-- <div style="float:right">
 		<?php echo $this->Html->link('Init DB','/Init',array('class'=>'btn green'))?>
-	</div>
+	</div> -->
 	<h1><?php echo $title?></h1>
 	<table class="table table-bordered">
 		<thead>
