@@ -13,6 +13,10 @@
 
 						<li class="active"><a href="#tab_item" data-toggle="tab"><?php echo __('Answer')?>
 						</a></li>
+						<li class=""><a href="#tab_order" data-toggle="tab"><?php echo __('Reference Data - Order')?>
+						</a></li>
+						<li class=""><a href="#tab_portion" data-toggle="tab"><?php echo __('Reference Data - Portion of Dishes')?>
+						</a></li>
 
 					</ul>
 
@@ -59,6 +63,82 @@
 									</tbody>
 								</table>
 							</div>
+						</div>
+
+						<div class="tab-pane row-fluid" id="tab_order">
+
+							<div class="portlet box green">
+								<div class="portlet-title">
+									<div class="caption">
+										<?php echo __('Orders')?>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<div class="row-fluid view_info">
+										<div class="span12 ">
+											<div class="row-fluid">
+												<table class="table table-bordered" id="table_orders">
+													<thead>
+														<tr>
+															<th style="width:10%">ID</th>
+															<th>NAME</th>
+															<th style="width:25%">Action (click to view order details)</th>
+														</tr>
+													</thead>
+													<tbody>
+														<?php foreach($orders as $k => $v):?>
+														<tr>
+															<td style="width:10%"><?php echo $k;?></td>
+															<td><?php echo $v;?></td>
+															<td style="width:20%"><?php echo $this->Html3->link('View Detail','/Order/view/'.$k);?></td>
+														</tr>	
+														<?php endforeach;?>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="tab-pane row-fluid" id="tab_portion">
+
+							<div class="portlet box green">
+								<div class="portlet-title">
+									<div class="caption">
+										<?php echo __('Portions of Dishes')?>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<div class="row-fluid view_info">
+										<div class="span12 ">
+											<div class="row-fluid">
+												<table class="table table-bordered" id="table_portions">
+													<thead>
+														<tr>
+															<th style="width:10%">ID</th>
+															<th>NAME</th>
+															<th style="width:25%">Action (click to view portion details)</th>		
+														</tr>
+													</thead>
+													<tbody>
+														<?php foreach($portions as $k => $v):?>
+														<tr>
+															<td style="width:10%"><?php echo $k?></td>
+															<td><?php echo $v[0]?></td>
+															<td style="width:20%"><?php echo $this->Html3->link('View Detail','/Portion/view/'.$v[1])?></td>
+														</tr>	
+														<?php endforeach;?>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 
 					</div>
